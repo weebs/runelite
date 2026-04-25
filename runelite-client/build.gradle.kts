@@ -35,6 +35,7 @@ plugins {
     id("net.runelite.runelite-gradle-plugin.assemble")
     id("net.runelite.runelite-gradle-plugin.index")
     id("net.runelite.runelite-gradle-plugin.jarsign")
+    id("org.jetbrains.kotlin.jvm") version "1.9.22"
 }
 
 lombok.version = libs.versions.lombok.get()
@@ -48,6 +49,7 @@ dependencies {
     api("net.runelite:runelite-api:${project.version}")
     implementation(project(":jshell"))
     runtimeOnly("net.runelite:injected-client:${project.version}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
 
     api(libs.rl.http.api)
     api(libs.rl.discord)

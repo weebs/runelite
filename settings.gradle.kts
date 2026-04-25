@@ -36,3 +36,9 @@ apply(from = "./common.settings.gradle.kts")
 includeBuild("cache")
 includeBuild("runelite-api")
 includeBuild("runelite-gradle-plugin")
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
